@@ -1,40 +1,8 @@
 'use client'
-import { gsap } from "gsap"
-import SplitType from 'split-type'
-
 import Image from "next/image"
-import { useEffect } from "react"
+import { TypeAnimation } from 'react-type-animation'
 
 function Hero() {
-    useEffect(() => {
-        const animateText = () => {
-            const subtitles = gsap.utils.toArray('p')
-
-            //gsap timeline for animations
-            const subtitleTimeline = gsap.timeline()
-
-            subtitles.forEach(sub => {
-                const mySub = new SplitType(sub)
-               
-                    subtitleTimeline
-                    .from(mySub.chars, { 
-                        opacity: 0,
-                        y: 80,
-                        rotateX: -90,
-                        stagger: 0.2
-                    }, "<")
-                    .to(mySub.chars, { 
-                        opacity: 1,
-                        y: -80,
-                        rotateX: 90,
-                        stagger: 0.2
-                    }, "<1")
-                
-            })
-        }
-        animateText()
-    }, [])
-
     return (
         <section
             id="home"
@@ -47,22 +15,23 @@ function Hero() {
                 </h1>
 
                 {/* animated subtitles */}
-                <div className="my-5">
-                    <div>
-                        <p className='m-0 leading-[0px] text-2xl text-center'>
-                            FULL STACK ENGINEER
-                        </p> 
-                        <p className='m-0 leading-[0px] text-2xl text-center'>
-                            WEB DEVELOPER
-                        </p> 
-                        <p className='m-0 leading-[0px] text-2xl text-center'>
-                            PROBLEM SOLVER
-                        </p> 
-                        <p className='m-0 leading-[0px] text-2xl text-center text-amber-400'>
-                            PIZZA LOVER
-                        </p>                   
-                    </div>
-                </div>
+                <TypeAnimation
+                    sequence={[
+                        // Same substring at the start will only be typed out once, initially
+                        'FULL STACK ENGINEER',
+                        1000, // wait 1s before replacing "Mice" with "Hamsters"
+                        'WEB DEVELOPER',
+                        1000,
+                        'PROBLEM SOLVER',
+                        1000,
+                        'PIZZA LOVER',
+                        1000
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    style={{ fontSize: '1.5em', display: 'inline-block', color:'gold' }}
+                    repeat={Infinity}
+                />
                 
                 <span className="text-slate-400 text-lg text-center lg:text-left md:text-xl">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam maiores nostrum cupiditate quibusdam saepe tenetur deleniti autem molestias aspernatur nam.
