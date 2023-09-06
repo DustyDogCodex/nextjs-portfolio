@@ -48,7 +48,7 @@ function About() {
     return (
         <section
             id="about"
-            className="my-16 flex flex-col-reverse md:flex-row items-center justify-between gap-8 border border-white"
+            className="my-20 flex flex-col-reverse md:flex-row items-center justify-between gap-8 border border-white"
         >
             <Image 
                 src="/about-me.jpg"
@@ -60,10 +60,10 @@ function About() {
 
             {/* about me heading/para and tabs */}
             <div
-                className="text-center my-5 md:my-0 md:text-left h-80"
+                className="h-80 text-center my-5 md:my-0 md:text-left"
             >
                 <h1 className="text-4xl font-bold mb-3">About Me</h1>
-                <p className="text-slate-400 text-base lg:text-lg p-2 text-center md:text-left">
+                <p className="text-slate-400 text-base lg:text-lg p-2 md:p-0 text-center md:text-left">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quae molestiae cumque dolor necessitatibus fugit. Incidunt velit autem labore aspernatur hic. Temporibus, alias incidunt. Recusandae quia cum quae veniam culpa?
                 </p>
 

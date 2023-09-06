@@ -3,6 +3,7 @@ import About from './components/About'
 import Hero from './components/Hero'
 import NavBar from './components/Navbar'
 import { useState } from 'react'
+import Portfolio from './components/Portfolio'
 
 export default function Home() {
     //using state to identify the current page the user is browser
@@ -18,6 +19,7 @@ export default function Home() {
             <div className='container mt-24'>
                 <Hero />
                 <About />
+                <Portfolio />
             </div>
         </main>
     )
