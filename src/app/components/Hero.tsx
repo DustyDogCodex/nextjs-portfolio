@@ -29,7 +29,11 @@ function Hero() {
                     ]}
                     wrapper="span"
                     speed={50}
-                    style={{ fontSize: '1.5em', display: 'inline-block', color:'gold' }}
+                    style={{ 
+                        fontSize: '1.5em', 
+                        display: 'inline-block', 
+                        color:'gold' 
+                    }}
                     repeat={Infinity}
                 />
                 
