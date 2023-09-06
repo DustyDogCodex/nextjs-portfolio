@@ -59,7 +59,7 @@ function Hero() {
                     alt="hero avatar"
                     width={350}
                     height={350}
-                    className="rounded-full shadow-[0_20px_50px_rgba(217,_70,_239,_0.7)] bg-fuchsia-500"
+                    className="rounded-full shadow-[0_20px_50px_rgba(217,_70,_239,_0.7)]"
                 />
             </div>
         </section>

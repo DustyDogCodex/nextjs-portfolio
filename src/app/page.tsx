@@ -1,4 +1,5 @@
 'use client'
+import About from './components/About'
 import Hero from './components/Hero'
 import NavBar from './components/Navbar'
 import { useState } from 'react'
@@ -16,6 +17,7 @@ export default function Home() {
             />
             <div className='container mt-24'>
                 <Hero />
+                <About />
             </div>
         </main>
     )

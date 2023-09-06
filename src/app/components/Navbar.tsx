@@ -21,7 +21,7 @@ const SmoothLink = ({ page, currentPage, setCurrentPage }: LinkProps) => {
             href={`#${lowerCasePage}`}
             onClick={() => setCurrentPage(lowerCasePage)}
         >
-            {page}
+            {page === 'Home' ? 'VM' : page}
         </AnchorLink>
     )
 }
@@ -34,7 +34,7 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
     const aboveSmallScreens: boolean = useMediaQuery("(min-width: 768px)")
 
     //determining if navbar is at top of page or not.
-    const [ topOfPage, setTopOfPage ] = useState(true)
+    const [ topOfPage, setTopOfPage ] = useState<boolean>(true)
 
     useEffect(() => {
         //using handleScroll to determine if user is browsing top section of the website
@@ -51,18 +51,17 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
             className={`${topOfPage ? "" : "bg-fuchsia-500"} fixed top-0 z-40 w-full flex items-center justify-center`}
         >
             <div
-                className='w-full flex items-center justify-between py-5 px-10 lg:w-4/5'
+                className='w-full flex items-center justify-between py-5 px-10 xl:w-4/5'
             >
                 {/* brand logo and name */}
                 <div
                     className='flex items-center justify-center'
                 >  
-                    <Link 
-                        href='#home'
-                        className='text-2xl text-amber-400 font-extrabold'
-                    >
-                        VM
-                    </Link>
+                    <SmoothLink
+                        page="Home"
+                        currentPage={currentPage}
+                        setCurrentPage={setCurrentPage}
+                    />
                 </div>
 
                 {/* menu options */}
