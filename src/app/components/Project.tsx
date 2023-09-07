@@ -32,14 +32,23 @@ function Project({ title, subtitle, links }: ProjectProps) {
                     <a href={`${links.github}`} target="_blank">
                         <FontAwesomeIcon 
                             icon={faGithub} 
-                            style={{color: "#000000", height:'25px', width:'25px'}} 
+                            style={{
+                                color: "white", 
+                                height:'25px', 
+                                width:'25px'
+                            }} 
                         />
                     </a>
 
                     <a href={`${links.live}`} target="_blank">
                         <FontAwesomeIcon 
                             icon={faArrowUpRightFromSquare} 
-                            style={{color: "#000000", marginLeft:'15px', height:'22px', width:'22px'}} 
+                            style={{
+                                color: "white", 
+                                marginLeft:'15px', 
+                                height:'22px', 
+                                width:'22px'
+                            }} 
                         />
                     </a>
                 </div>
@@ -47,7 +56,7 @@ function Project({ title, subtitle, links }: ProjectProps) {
 
             {/* project screenshot */}
             <img 
-                className="w-full max-h-80"
+                className="w-full h-full object-cover"
                 src={`./projects/${title.toLowerCase()}.jpeg`}
                 alt={`${title.toLowerCase()} screenshot`} 
             />

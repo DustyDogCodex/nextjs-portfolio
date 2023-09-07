@@ -55,12 +55,12 @@ function About() {
                 alt="THE GREATEST STUDENT IN THE HISTORY OF STUDYING"
                 width={360}
                 height={400}
-                className="w-fit h-96 rounded-lg"
+                className="w-full md:w-1/2 h-96 rounded-lg"
             />
 
             {/* about me heading/para and tabs */}
             <div
-                className="h-80 text-center my-5 md:my-0 md:text-left"
+                className="h-80 md:h-96 text-center my-5 md:my-0 md:text-left"
             >
                 <h1 className="text-4xl font-bold mb-3">About Me</h1>
                 <p className="text-slate-400 text-base lg:text-lg p-2 md:p-0 text-center md:text-left">
@@ -69,8 +69,9 @@ function About() {
 
                 {/* tabs */}
                 <div className="flex items-center justify-center md:justify-start mt-5 gap-5">
-                    {tabs.map(tab => 
+                    {tabs.map((tab,index) => 
                         <span 
+                            key={index}
                             className={`${activeTab === tab ? 'text-white font-bold border-b-2 border-fuchsia-500' : 'text-slate-400 border-none'} cursor-pointer hover:text-white transition duration-300`}
                             onClick={() => setActiveTab(tab)}
                         >
@@ -82,7 +83,7 @@ function About() {
                 <div
                     className="flex flex-col text-slate-400 my-3"
                 >
-                    {tabInfo[getInfo(activeTab)].map((el: string) => <span>{el}</span>)}
+                    {tabInfo[getInfo(activeTab)].map((el: string, index: number) => <span key={index}>{el}</span>)}
                 </div>
             </div>
         </section>

@@ -66,8 +66,9 @@ function Portfolio() {
     return (
         <section
             id='portfolio'
+            className="flex flex-col items-center my-20"
         >
-            <h1 className="text-4xl font-bold mb-3">My Portfolio</h1>
+            <h1 className="text-4xl font-bold mb-10">My Portfolio</h1>
             <div
                 className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2"
             >
