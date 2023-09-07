@@ -5,6 +5,7 @@ import NavBar from './components/Navbar'
 import { useState } from 'react'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 export default function Home() {
     //using state to identify the current page the user is browser
@@ -22,6 +23,7 @@ export default function Home() {
                 <About />
                 <Portfolio />
                 <Contact />
+                <Footer />
             </div>
         </main>
     )

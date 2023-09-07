@@ -45,12 +45,14 @@ function Contact() {
                 <form className="flex flex-col gap-4">
                     <input 
                         type="email" 
+                        id="email"
                         required
                         placeholder="Your email address"
                         className="p-2 rounded-xl bg-slate-800 text-white placeholder-slate-400"    
                     />
                     <input 
                         type="text" 
+                        id="subject"
                         required
                         placeholder="Subject"    
                         className="p-2 rounded-xl bg-slate-800 text-white placeholder-slate-400" 
