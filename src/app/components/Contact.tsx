@@ -20,19 +20,19 @@ function Contact() {
                 {/* links to socials */}
                 <div className="mt-5 flex items-center gap-5">
                     <a
-                        href={'https://github.com/DustyDogCodex'}
+                        href='https://github.com/DustyDogCodex'
                         target="_blank"
                     >
                         <FontAwesomeIcon icon={faGithub} style={{ color:'white', height:'2rem', width:'2rem' }} />
                     </a>
                     <a
-                        href={'https://twitter.com/VarunMalaviya2'}
+                        href='https://twitter.com/VarunMalaviya2'
                         target="_blank"
                     >
                         <FontAwesomeIcon icon={faTwitter} style={{ color:'skyblue', height:'2rem', width:'2rem' }} />
                     </a>
                     <a
-                        href={'https://www.linkedin.com/in/varun-malaviya-012677108/'}
+                        href='https://www.linkedin.com/in/varun-malaviya-012677108/'
                         target="_blank"
                     >
                         <FontAwesomeIcon icon={faLinkedin} style={{ color:'limegreen', height:'2rem', width:'2rem' }} />
