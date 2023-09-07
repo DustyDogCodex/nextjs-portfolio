@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import NavBar from './components/Navbar'
 import { useState } from 'react'
 import Portfolio from './components/Portfolio'
+import Contact from './components/Contact'
 
 export default function Home() {
     //using state to identify the current page the user is browser
@@ -20,6 +21,7 @@ export default function Home() {
                 <Hero />
                 <About />
                 <Portfolio />
+                <Contact />
             </div>
         </main>
     )
