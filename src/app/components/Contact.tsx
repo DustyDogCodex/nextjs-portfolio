@@ -42,7 +42,7 @@ function Contact() {
 
             {/* contact me form */}
             <div className="w-1/2 px-5">
-                <form className="flex flex-col gap-4">
+                <form action="https://formsubmit.co/varunmalaviya7@gmail.com" method="POST" className="flex flex-col gap-4">
                     <input 
                         type="email" 
                         id="email"
