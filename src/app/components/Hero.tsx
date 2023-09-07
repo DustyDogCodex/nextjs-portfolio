@@ -11,7 +11,7 @@ function Hero() {
             {/* hero intro & buttons */}
             <div className="col-span-7 flex flex-col items-center lg:items-start justify-center">
                 <h1 className="text-5xl font-extrabold mb-3">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-sky-400 to-blue-600">Hi, I'm</span> Varun
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-sky-400 to-blue-600">{"Hi, I'm"}</span> Varun
                 </h1>
 
                 {/* animated subtitles */}

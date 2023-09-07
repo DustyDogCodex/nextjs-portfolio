@@ -10,11 +10,11 @@ function Contact() {
             <div className="w-1/2"
             >
                 {/* heading and intro to section */}
-                <h2 className="text-2xl font-bold">Let's Connect</h2>
+                <h2 className="text-2xl font-bold">{"Let's Connect"}</h2>
                 <p
                     className="text-slate-400 text-lg mt-3"
                 >
-                    I'm currently looking for new oppurtunities to work, learn and grow my skillset. If you'd like to hire me, collaborate on a project or buy me a slice of pizza, feel free to send me an email using the contact form. I look forward to hearing from you!
+                    {"I'm currently looking for new oppurtunities to work, learn and grow my skillset. If you'd like to hire me, collaborate on a project or buy me a slice of pizza, feel free to send me an email using the contact form. I look forward to hearing from you!"}
                 </p>
 
                 {/* links to socials */}
