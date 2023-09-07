@@ -48,19 +48,22 @@ function About() {
     return (
         <section
             id="about"
-            className="my-20 flex flex-col-reverse md:flex-row items-center justify-between gap-8 border border-white"
+            className="my-10 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-8 relative"
         >
+            {/* blurred blue circle effect in the background */}
+            <div className="bg-blurred-circle from-primary-900 to-transparent rounded-full h-80 w-80 blur-lg absolute top-0 right-0" />
+
             <Image 
                 src="/about-me.jpg"
                 alt="THE GREATEST STUDENT IN THE HISTORY OF STUDYING"
                 width={360}
                 height={400}
-                className="w-full md:w-1/2 h-96 rounded-lg"
+                className="w-full md:w-1/2 h-96 rounded-lg mt-5 md:mt-0"
             />
 
             {/* about me heading/para and tabs */}
             <div
-                className="h-80 md:h-96 text-center my-5 md:my-0 md:text-left"
+                className="h-80 md:h-96 text-center my-5 md:my-0 md:text-left z-40"
             >
                 <h1 className="text-4xl font-bold mb-3">About Me</h1>
                 <p className="text-slate-400 text-base lg:text-lg p-2 md:p-0 text-center md:text-left">

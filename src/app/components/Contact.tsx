@@ -5,20 +5,23 @@ function Contact() {
     return (
         <section
             id="contact"
-            className="flex items-center my-20"
+            className="flex flex-col md:flex-row items-center my-10 py-20 md:py-32 px-4 relative"
         >
-            <div className="w-1/2"
+            {/* blurred blue circle effect in the background */}
+            <div className="bg-blurred-circle from-primary-900 to-transparent rounded-full h-80 w-80 blur-lg absolute top-0 -left-4 transform -translate-x-1/2 -translate-1/2" />
+
+            <div className="w-full md:w-1/2 z-40"
             >
                 {/* heading and intro to section */}
-                <h2 className="text-2xl font-bold">{"Let's Connect"}</h2>
+                <h2 className="text-2xl font-bold text-center md:text-left">{"Let's Connect"}</h2>
                 <p
-                    className="text-slate-400 text-lg mt-3"
+                    className="text-slate-400 text-lg mt-3 text-center md:text-left"
                 >
                     {"I'm currently looking for new oppurtunities to work, learn and grow my skillset. If you'd like to hire me, collaborate on a project or buy me a slice of pizza, feel free to send me an email using the contact form. I look forward to hearing from you!"}
                 </p>
 
                 {/* links to socials */}
-                <div className="mt-5 flex items-center gap-5">
+                <div className="mt-5 flex items-center justify-center md:justify-start gap-5">
                     <a
                         href='https://github.com/DustyDogCodex'
                         target="_blank"
@@ -41,7 +44,7 @@ function Contact() {
             </div>
 
             {/* contact me form */}
-            <div className="w-1/2 px-5">
+            <div className="w-full md:w-1/2 px-0 md:px-5 mt-5 md:mt-0">
                 <form action="https://formsubmit.co/280e83d4b1c4a5bbf549d02633e4c5fa" method="POST" className="flex flex-col gap-4">
                     <input 
                         type="email" 

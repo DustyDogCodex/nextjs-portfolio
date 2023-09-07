@@ -6,7 +6,7 @@ function Hero() {
     return (
         <section
             id="home"
-            className="grid grid-cols-1 lg:grid-cols-12 border border-white z-20"
+            className="grid grid-cols-1 lg:grid-cols-12 z-20 my-10 py-12 md:py-32"
         >
             {/* hero intro & buttons */}
             <div className="col-span-7 flex flex-col items-center lg:items-start justify-center">

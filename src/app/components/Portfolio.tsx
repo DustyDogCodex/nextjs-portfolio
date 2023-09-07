@@ -66,7 +66,7 @@ function Portfolio() {
     return (
         <section
             id='portfolio'
-            className="flex flex-col items-center my-20"
+            className="flex flex-col items-center my-10 py-20 md:py-32"
         >
             <h1 className="text-4xl font-bold mb-10">My Portfolio</h1>
             <div
