@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
-import Link from "next/link"
+import { faGithub, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 function Contact() {
     return (
@@ -32,12 +31,49 @@ function Contact() {
                     >
                         <FontAwesomeIcon icon={faTwitter} style={{ color:'skyblue', height:'2rem', width:'2rem' }} />
                     </a>
+                    <a
+                        href={'https://www.linkedin.com/in/varun-malaviya-012677108/'}
+                        target="_blank"
+                    >
+                        <FontAwesomeIcon icon={faLinkedin} style={{ color:'limegreen', height:'2rem', width:'2rem' }} />
+                    </a>
                 </div>
             </div>
 
             {/* contact me form */}
-            <div className="w-1/2">
-                form
+            <div className="w-1/2 px-5">
+                <form className="flex flex-col gap-4">
+                    <input 
+                        type="email" 
+                        required
+                        placeholder="Your email address"
+                        className="p-2 rounded-xl bg-slate-800 text-white placeholder-slate-400"    
+                    />
+                    <input 
+                        type="text" 
+                        required
+                        placeholder="Subject"    
+                        className="p-2 rounded-xl bg-slate-800 text-white placeholder-slate-400" 
+                    />
+                    <textarea 
+                        name="message" 
+                        id="message" 
+                        placeholder="Connect with me by sending me a message!"
+                        rows={6}
+                        required
+                        className="p-2 rounded-xl bg-slate-800 text-white placeholder-slate-400"  
+                    />
+                    <div
+                        className="w-full flex items-center justify-center"
+                    >
+                        <button
+                            type="submit"
+                            className="bg-fuchsia-600 py-2 px-5 text-lg w-fit rounded-xl hover:scale-110 transition duration-300"
+                        >
+                            Send Message!
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
     )
