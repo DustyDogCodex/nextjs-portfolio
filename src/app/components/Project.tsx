@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
+import { motion } from "framer-motion"
 
 type ProjectProps = {
     title: string,
@@ -9,8 +10,15 @@ type ProjectProps = {
 }
 
 function Project({ title, subtitle, links }: ProjectProps) {
+    //lowercasing project titles to reference project screenshots.
+    const projectTitle = title.split(" ").join("-").toLowerCase()
+
     return (
-        <div
+        <motion.div
+            variants={{
+                hidden: { opacity: 0, scale: 0.8 },
+                visible: { opacity: 1, scale: 1 }
+            }}
             className="relative"
         >
             <div
@@ -57,10 +65,10 @@ function Project({ title, subtitle, links }: ProjectProps) {
             {/* project screenshot */}
             <img 
                 className="w-full h-full object-cover"
-                src={`./projects/${title.toLowerCase()}.jpeg`}
-                alt={`${title.toLowerCase()} screenshot`} 
+                src={`./projects/${projectTitle}.jpeg`}
+                alt={`${projectTitle} screenshot`} 
             />
-        </div>
+        </motion.div>
     )
 }
 

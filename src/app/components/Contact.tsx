@@ -1,16 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { motion } from 'framer-motion'
 
 function Contact() {
     return (
-        <section
+        <motion.section
             id="contact"
             className="flex flex-col md:flex-row items-center my-10 py-20 md:py-32 px-4 relative"
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1 }}
+            variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 }
+            }}
         >
             {/* blurred blue circle effect in the background */}
             <div className="bg-blurred-circle from-primary-900 to-transparent rounded-full h-80 w-80 blur-lg absolute top-0 -left-4 transform -translate-x-1/2 -translate-1/2" />
 
-            <div className="w-full md:w-1/2 z-40"
+            <div className="w-full md:w-1/2 z-20"
             >
                 {/* heading and intro to section */}
                 <h2 className="text-2xl font-bold text-center md:text-left">{"Let's Connect"}</h2>
@@ -80,7 +89,7 @@ function Contact() {
                     </div>
                 </form>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

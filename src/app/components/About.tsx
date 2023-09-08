@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { useState } from 'react'
+import { motion } from "framer-motion"
 
 function About() {
     //variable for conditionally styling tab currently selected by user
@@ -46,9 +47,17 @@ function About() {
     ]
 
     return (
-        <section
+        <motion.section
             id="about"
             className="my-10 py-20 md:py-32 flex flex-col-reverse md:flex-row items-center justify-between gap-8 relative"
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1 }}
+            variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 }
+            }}
         >
             {/* blurred blue circle effect in the background */}
             <div className="bg-blurred-circle from-primary-900 to-transparent rounded-full h-80 w-80 blur-lg absolute top-0 right-0" />
@@ -89,7 +98,7 @@ function About() {
                     {tabInfo[getInfo(activeTab)].map((el: string, index: number) => <span key={index}>{el}</span>)}
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

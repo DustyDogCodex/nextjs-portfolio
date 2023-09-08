@@ -1,4 +1,5 @@
 import Project from "./Project"
+import { motion } from "framer-motion"
 
 function Portfolio() {
     //type declarations for project component props
@@ -63,23 +64,54 @@ function Portfolio() {
         }
     ]
 
-    return (
-        <section
-            id='portfolio'
-            className="flex flex-col items-center my-10 py-20 md:py-32"
-        >
-            <h1 className="text-4xl font-bold mb-10">My Portfolio</h1>
-            <div
-                className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2"
-            >
-                {projects.map((project: ProjectProps, index: number) => 
+    const container = {
+        hidden: {}, //nothing will happen when hidden
+        visible: {
+            //animation for each of the child components (each individual project) will happen in a staggered fashion with a 0.2 delay between each other.
+            transition: { staggerChildren: 0.2 }
+        }
+    }
+
+    const projectElements = projects.map((project: ProjectProps, index: number) => 
                     <Project
                         key={index}
                         title={project.title}
                         subtitle={project.subtitle}
                         links={project.links}
                     />
-                )}
+                )
+
+    return (
+        <section
+            id='portfolio'
+            className="py-32"
+        >
+            <motion.div
+                className="md:w-2/4 mx-auto"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                    hidden: { opacity: 0, y: -50 },
+                    visible: { opacity: 1, y: 0}
+                }}
+            >
+                <h1 className="text-4xl font-bold mb-10 text-center">
+                    My Portfolio
+                </h1>            
+            </motion.div>
+                
+            <div className="flex justify-center">
+                <motion.div
+                    className="sm:grid sm:grid-cols-3"
+                    variants={container}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                >
+                    {projectElements}
+                </motion.div>
             </div>
         </section>
     )

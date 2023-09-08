@@ -48,7 +48,7 @@ function NavBar({ currentPage, setCurrentPage }: LinkProps) {
 
     return (
         <nav
-            className={`${topOfPage ? "" : "bg-fuchsia-500"} fixed top-0 z-40 w-full flex items-center justify-center`}
+            className={`${topOfPage ? "" : "bg-fuchsia-500"} fixed top-0 z-50 w-full flex items-center justify-center`}
         >
             <div
                 className='w-full flex items-center justify-between py-5 px-10 xl:w-4/5'

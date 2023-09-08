@@ -1,15 +1,26 @@
 'use client'
 import Image from "next/image"
 import { TypeAnimation } from 'react-type-animation'
+import { motion } from "framer-motion"
 
 function Hero() {
     return (
-        <section
+        <motion.section
             id="home"
-            className="grid grid-cols-1 lg:grid-cols-12 z-20 my-10 py-12 md:py-32"
+            className="w-full grid grid-cols-1 lg:grid-cols-12 z-20 my-10 py-12 md:py-32"
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1 }}
+            variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 }
+            }}
         >
             {/* hero intro & buttons */}
-            <div className="col-span-7 flex flex-col items-center lg:items-start justify-center">
+            <div 
+                className="col-span-7 flex flex-col items-center lg:items-start justify-center"
+            >
                 <h1 className="text-5xl font-extrabold mb-3">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-sky-400 to-blue-600">{"Hi, I'm"}</span> Varun
                 </h1>
@@ -17,9 +28,8 @@ function Hero() {
                 {/* animated subtitles */}
                 <TypeAnimation
                     sequence={[
-                        // Same substring at the start will only be typed out once, initially
                         'FULL STACK ENGINEER',
-                        1000, // wait 1s before replacing "Mice" with "Hamsters"
+                        1000,
                         'WEB DEVELOPER',
                         1000,
                         'PROBLEM SOLVER',
@@ -62,7 +72,7 @@ function Hero() {
                     className="rounded-full shadow-[0_20px_50px_rgba(217,_70,_239,_0.7)]"
                 />
             </div>
-        </section>
+        </motion.section>
     )     
 }
 
