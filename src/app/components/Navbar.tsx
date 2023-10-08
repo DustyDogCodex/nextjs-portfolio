@@ -3,7 +3,6 @@ import useMediaQuery from '../hooks/useMediaQuery'
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/link'
 
 type LinkProps = {
     page: string,
